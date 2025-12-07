@@ -1,0 +1,43 @@
+import React from 'react';
+import './App.css';
+import NotificationDemo from './components/NotificationDemo';
+import AiImageWidget from './components/AiImageWidget';
+
+function App() {
+  return (
+    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-900 via-slate-950 to-zinc-900">
+      <div className="max-w-4xl w-full px-4 py-8">
+        <h1 className="text-3xl md:text-4xl font-semibold tracking-tight text-white mb-2">
+          DigitalBuzz Lab
+        </h1>
+        <p className="text-slate-300 mb-8 max-w-xl">
+          Firebase push notifications, Crashlytics logging, and an AI image widget
+          built as reusable React components with Tailwind CSS.
+        </p>
+
+        {/* Components will be wired here */}
+        <div className="grid md:grid-cols-2 gap-6">
+          <div className="bg-slate-900/60 border border-slate-800 rounded-2xl p-5 shadow-xl shadow-slate-950/40">
+            <h2 className="text-lg font-semibold text-white mb-2">Notifications & Crashlytics</h2>
+            <p className="text-sm text-slate-400 mb-4">
+              Request permission, fire a test notification, and log demo errors
+              as if they were sent to Crashlytics.
+            </p>
+            <NotificationDemo />
+          </div>
+
+          <div className="bg-slate-900/60 border border-slate-800 rounded-2xl p-5 shadow-xl shadow-slate-950/40">
+            <h2 className="text-lg font-semibold text-white mb-2">AI Image Widget</h2>
+            <p className="text-sm text-slate-400 mb-4">
+              Type a prompt and generate a demo image using a pluggable
+              AI backend.
+            </p>
+            <AiImageWidget />
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+export default App;
